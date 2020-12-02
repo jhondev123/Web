@@ -1,6 +1,5 @@
 <?php
 class Usuario{
-
 public function login ($email,$Senha){
 global $pdo;
 $sql = "SELECT * FROM usuario WHERE email = :email AND Senha = :Senha";
@@ -11,7 +10,7 @@ $sql->execute();
 
 if($sql->rowCount()>0){
     $dado=$pdo->fetch();
-    echo $dado ['idusuario'];
+    echo $dado ["idusuario"];
 }
 }
 
